@@ -1,1 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'leaflet/dist/leaflet.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#map {
+  height: 500px !important;
+  width: 100% !important;
+  border-radius: 0.5rem;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.custom-marker {
+  background: none !important;
+  border: none !important;
+}
+
+.leaflet-map-pane {
+  z-index: 2 !important;
+}
+
+.leaflet-tile-pane {
+  z-index: 20 !important;
+}
+
+.leaflet-marker-pane {
+  z-index: 40 !important;
+}
+
+.leaflet-popup {
+  z-index: 650 !important;
+}
+
+.leaflet-popup-pane {
+  z-index: 60 !important;
+}
+
+.leaflet-overlay-pane {
+  z-index: 40 !important;
+}
+
+.leaflet-marker-icon {
+  z-index: 40 !important;
+}
+
+.active-marker {
+  z-index: 650 !important;
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: 1rem;
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 0;
+}
+
+.leaflet-popup-tip-container {
+  display: none !important;
+}
+
+
+.active-marker-widget {
+  @apply border-blue-500 ring-2 ring-blue-300;
+}
+
+.custom-marker {
+  width: 40px !important;
+  height: 50px !important;
+}
+
+.active-marker {
+  filter: drop-shadow(0 0 6px rgba(0, 125, 252, 0.6));
+}
+
+.active-marker-widget {
+  border: 2px solid #007DFC !important;
+}
+
+.weather-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 80px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007DFC;
+  border-radius: 2px;
+  min-height: 100px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #007DFC transparent;
+}
+
+.max-h-[500px] {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  padding-right: 8px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding-top: 6rem;
+  }
+}
